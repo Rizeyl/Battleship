@@ -58,10 +58,10 @@ public class Main {
     }
 
     private static boolean isValid1Paluba(int row, int col) {
-        if (row < 0 || row >= SIZE ){
+        if (row < 0 || row >= SIZE) {
             return false;
         }
-        if (col < 0 || col >= SIZE ){
+        if (col < 0 || col >= SIZE) {
             return false;
         }
 
@@ -71,53 +71,36 @@ public class Main {
 
 
         // left (compact)
-        if (col > 0 && map[row][col-1] != SYMBOL_SEA){
+        if (col > 0 && map[row][col - 1] != SYMBOL_SEA) {
             return false;
         }
 
         //right (compact)
-        if (col < 9 && map [row][col + 1] != SYMBOL_SEA){
+        if (col < 9 && map[row][col + 1] != SYMBOL_SEA) {
             return false;
         }
 
         // top(compact)
-        if(row > 0 && map[row - 1][col] != SYMBOL_SEA) {
+        if (row > 0 && map[row - 1][col] != SYMBOL_SEA) {
             return false;
         }
 
         //bottom (compact)
-        if(row < 9 && map[row + 1][col] !=SYMBOL_SEA){
+        if (row < 9 && map[row + 1][col] != SYMBOL_SEA) {
             return false;
         }
 
-//        // left-top
-//        if (col != 0 && row != 0) {
-//            if (map[row - 1][col - 1] != SYMBOL_SEA) {
-//                return false;
-//            }
-//        }
-
         // left-top (compact)
-        if (row > 0 && col > 0 && map [row - 1][col - 1] != SYMBOL_SEA) {
+        if (row > 0 && col > 0 && map[row - 1][col - 1] != SYMBOL_SEA) {
             return false;
         }
 
         //right-bottom (compact)
-        if (row < 9 && col < 9 && map [row + 1][col + 1] !=SYMBOL_SEA){
+        if (row < 9 && col < 9 && map[row + 1][col + 1] != SYMBOL_SEA) {
             return false;
         }
 
-
-        // top
-        // right
-
-
-
-
-
-
         return true;
-
 
 
     }
@@ -150,8 +133,8 @@ public class Main {
         return secondCh - '1';
     }
 
-        private static void generateMap() {
-            int randomPlace1 = (int) (Math.random() * 10);
+    private static void generateMap() {
+        int randomPlace1 = (int) (Math.random() * 10);
         int randomPlace2 = (int) (Math.random() * 10);
 
         //Заполняем массив
