@@ -99,6 +99,12 @@ public class Main {
         if (row < 9 && col < 9 && map[row + 1][col + 1] != SYMBOL_SEA) {
             return false;
         }
+        if (row < 9 && col > 0 && map[row+1][col-1] !=SYMBOL_SEA) {
+            return false;
+        }
+        if (row > 0 && col < 9 && map[row-1][col+1] !=SYMBOL_SEA) {
+            return false;
+        }
 
         return true;
 
